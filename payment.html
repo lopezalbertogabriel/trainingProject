@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>ChowebFront</title>
+  <base href="/">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <script src="https://secure.mlstatic.com/sdk/javascript/v1/mercadopago.js"></script>
+  <script src="file:///Users/alblopez/intellij/choweb-front/src/application.js"></script>
+</head>
+<body>
+<a href="" id="b1" name="MP-Checkout" class="green-L-Rn" mp-mode="modal" onreturn="modal_onreturn">Ir a checkout
+  (modal)</a>
+<a href="" id="b2" name="MP-Checkout" class="green-L-Rn" mp-mode="popup">Ir a checkout (popup)</a>
+<a href="" id="b3" name="MP-Checkout" class="green-L-Rn" mp-mode="redirect">Ir a checkout (redirect)</a>
+<a href="" id="b4" name="MP-Checkout" class="green-L-Rn" mp-mode="blank">Ir a checkout (blank)</a>
+<script>
+  document.getElementById("b1").setAttribute("href", getInitPoint());
+  document.getElementById("b2").setAttribute("href", getInitPoint());
+  document.getElementById("b3").setAttribute("href", getInitPoint());
+  document.getElementById("b4").setAttribute("href", getInitPoint());
+</script>
+<p id="alertMessage"></p>
+</body>
