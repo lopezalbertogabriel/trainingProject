@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Payment result</title>
+    <script src="http://localhost:8080/trainingProject/js/application.js"></script>
+</head>
+<body>
+<p id="OutputMessage"></p>
+<script>
+    var x = "";
+    var collectionStatus = qs("collection_status");
+    if(collectionStatus == 'approved'){
+        x = 'El pago se realizó correctamente';
+    }else if(collectionStatus == 'rejected'){
+        x = 'El pago fue rechazado, reintentar';
+    }else if(collectionStatus == 'pending'){
+        x = 'El pago quedó pendiente';
+    }
+    document.getElementById("OutputMessage").innerHTML = x;
+</script>
+</body>
+</html>
