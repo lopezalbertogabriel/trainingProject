@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>ChowebFront</title>
+    <link rel="stylesheet" type="text/css" href="../css/payment.css">
+    <base href="/">
+    <script src="https://secure.mlstatic.com/sdk/javascript/v1/mercadopago.js"></script>
+    <script src="http://localhost:8080/trainingProject/js/application.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="trainingProject/js/payment.js"></script>
+</head>
+<body>
+<div style="width: 30%; margin-top: 5%; display: inline-block;">
+    <h1>V1</h1>
+    <div style="margin-left: 30%">
+        <div>
+            <a href="" id="b1" name="MP-Checkout" class="green-L-Rn" mp-mode="modal" onreturn="modal_onreturn"> V1 -
+                Modal </a>
+        </div>
+        <div>
+            <a href="" id="b2" name="MP-Checkout" class="green-L-Rn" mp-mode="popup"> V1 - popup </a>
+        </div>
+        <div>
+            <a href="" id="b3" name="MP-Checkout" class="green-L-Rn" mp-mode="redirect">V1 - Redirect</a>
+        </div>
+        <div>
+            <a href="" id="b4" name="MP-Checkout" class="green-L-Rn" mp-mode="blank"> V1 - Blank </a>
+        </div>
+        <script>
+            document.getElementById("b1").setAttribute("href", getInitPoint());
+            document.getElementById("b2").setAttribute("href", getInitPoint());
+            document.getElementById("b3").setAttribute("href", getInitPoint());
+            document.getElementById("b4").setAttribute("href", getInitPoint());
+        </script>
+        <p id="alertMessage"></p>
+    </div>
+</div>
+
+<div style="width: 30%; margin-top: 5%; display: inline-block; vertical-align: top">
+    <h1>V2</h1>
+    <div style="margin: 30px">
+        TOKENIZE(amount)
+        <form id="tokenizeForm" action="http://localhost:8089/tokenize_checkout_v2" method="POST">
+        </form>
+    </div>
+    <div style="margin: 30px">
+        CHECKOUT(preference)
+        <form id="checkoutForm" action="http://localhost:8089/checkout_v2" method="POST">
+        </form>
+    </div>
+</div>
+</body>

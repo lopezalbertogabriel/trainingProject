@@ -5,12 +5,20 @@
       <element id="directory" name="META-INF">
         <element id="file-copy" path="$PROJECT_DIR$/META-INF/MANIFEST.MF" />
       </element>
-      <element id="file-copy" path="$PROJECT_DIR$/payment.html" />
       <element id="directory" name="js">
         <element id="dir-copy" path="$PROJECT_DIR$/js" />
       </element>
       <element id="directory" name="backUrls">
         <element id="dir-copy" path="$PROJECT_DIR$/backUrls" />
+      </element>
+      <element id="directory" name="css">
+        <element id="dir-copy" path="$PROJECT_DIR$/css" />
+      </element>
+      <element id="directory" name="v1">
+        <element id="dir-copy" path="$PROJECT_DIR$/v1" />
+      </element>
+      <element id="directory" name="payment">
+        <element id="dir-copy" path="$PROJECT_DIR$/payment" />
       </element>
     </root>
   </artifact>

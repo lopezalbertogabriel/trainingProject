@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Checkout personalizado V1</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <link rel="stylesheet" type="text/css" href="../css/v1.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="../js/v1.js"></script>
+</head>
+<body>
+<div style="text-align: center">
+    <h1>CHECKOUT personalizado V1</h1>
+</div>
+<form id="v1Form" action="">
+    <div style="width: 50%; margin-top: 20px; margin-left: 20%;">
+
+        <div class="tab" style="display: block;">
+            <div id="inputs" style="display: inline-block;">
+                <div id="card_number" class="INPUT_BOX">
+                    <label><span>Numero de tarjeta</span>
+                        <input maxlength="16">
+                    </label>
+                </div>
+                <div id="cvv" class="INPUT_BOX" style="display: inline-block; float: left; width: 30%;">
+                    <label><span>CVV</span>
+                        <input maxlength="3">
+                    </label>
+                </div>
+                <div id="expiry" class="INPUT_BOX" style="display: inline-block; margin-left: 0; width: 50%;">
+                    <label><span>Vencimiento</span>
+                        <input id="month" maxlength="2" placeholder="MM">
+                        <input id="year" maxlength="2" placeholder="AA">
+                    </label>
+                </div>
+                <div id="idNumber" class="INPUT_BOX">
+                    <label><span>Identificación</span>
+                        <input style="width: 50%; display: inline-block;">
+                        <select id="id_selector" style="display: inline-block;">
+                        </select>
+                    </label>
+                </div>
+                <div id="amount" class="INPUT_BOX">
+                    <label><span>Cantidad a pagar</span>
+                        <input style="width: 50%;">
+                    </label>
+                </div>
+            </div>
+            <div style="display: inline-block; text-align: left;">
+            </div>
+            <a href="#" class="BUTTON_AGF" onclick="next()"></a>
+        </div>
+
+        <div class="tab">
+            <div>
+                <span id="issuerName">Cuotas disponibles - <script>issuerName</script></span>
+            </div>
+            <div id="cuotas">
+            </div>
+            <div>
+                <select id="intallments_selector">
+                    <option value="-1" disabled selected>Elegir una opcion</option>
+                </select>
+            </div>
+            <a href="#" class="BUTTON_AGF" onclick="next()"></a>
+        </div>
+
+
+        <div class="tab" style="text-align: center">
+            <p id="loading_text"></p>
+        </div>
+
+
+    </div>
+
+</form>
+
+<script>showTab(currentTab)</script>
+</body>
+</html>

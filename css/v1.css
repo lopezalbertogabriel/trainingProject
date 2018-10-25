@@ -1,0 +1,106 @@
+.tab {
+    display: none;
+}
+.BUTTON_AGF {
+    background: #1DCC92;
+    background-image: -webkit-linear-gradient(top, #1DCC92, #195F82);
+    background-image: -moz-linear-gradient(top, #1DCC92, #195F82);
+    background-image: -ms-linear-gradient(top, #1DCC92, #195F82);
+    background-image: -o-linear-gradient(top, #1DCC92, #195F82);
+    background-image: linear-gradient(to bottom, #1DCC92, #195F82);
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    border-radius: 0px;
+    color: #FFFFFF;
+    font-family: Open Sans;
+    font-size: 20px;
+    font-weight: 100;
+    padding: 20px;
+    box-shadow: 1px 1px 20px 0px #000000;
+    -webkit-box-shadow: 1px 1px 20px 0px #000000;
+    -moz-box-shadow: 1px 1px 20px 0px #000000;
+    text-shadow: 1px 1px 20px #000000;
+    border: solid #000000 1px;
+    text-decoration: none;
+    display: block;
+    cursor: pointer;
+    margin-top: 20px;
+    float: right;
+}
+
+.BUTTON_AGF:hover {
+    background: #28BD9A;
+    background-image: -webkit-linear-gradient(top, #28BD9A, #1E4247);
+    background-image: -moz-linear-gradient(top, #28BD9A, #1E4247);
+    background-image: -ms-linear-gradient(top, #28BD9A, #1E4247);
+    background-image: -o-linear-gradient(top, #28BD9A, #1E4247);
+    background-image: linear-gradient(to bottom, #28BD9A, #1E4247);
+    text-decoration: none;
+}
+
+
+.INPUT_BOX {
+    margin-left: 10%;
+    margin-top: 4%;
+}
+.INPUT_BOX span{
+    display: block;
+    font: bold 12px/normal "Courier New", Courier, monospace;
+    color: #444444;
+}
+
+.INPUT_BOX input{
+    display: block;
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: inherit;
+    padding: 10px 20px;
+    border: 1px solid #b7b7b7;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    font: normal 15px/normal "Courier New", Courier, monospace;
+    color: #444444;
+    -o-text-overflow: clip;
+    text-overflow: clip;
+    letter-spacing: 17px;
+    white-space: nowrap;
+    background: #EEEEEE;
+    -webkit-box-shadow: 2px 2px 2px 0 rgba(0,0,0,0.2) inset;
+    box-shadow: 2px 2px 2px 0 rgba(0,0,0,0.2) inset;
+}
+
+#card_number input {
+    width: 80%;
+}
+
+#cvv input{
+    width: 40%;
+}
+#expiry input{
+    width: 30%;
+    display: inline-block;
+}
+
+#inputs {
+}
+
+select{
+    font-size: 13px;
+    padding: 10px 8px 10px 14px;
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    position: relative;
+}
+
+#issuerName{
+    font-weight: bold;
+}
+
+* {
+    font-family: "Courier New";
+    color: #616161;
+    background: #bababa;
+    text-shadow: #e0e0e0 1px 1px 0;
+    font-size: 20px;
+}
