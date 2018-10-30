@@ -1,0 +1,32 @@
+.input{
+  width: fit-content;
+  vertical-align: top;
+  horiz-align: left;
+  margin-bottom: 5%;
+  margin-right: 5%;
+  display: inline-block;
+}
+
+.input span{
+  font-size: small;
+  display: block;
+}
+
+.input input{
+  width: auto;
+  height: 10%;
+  font-size: small;
+  display: inline;
+}
+
+.element li{
+  cursor: pointer;
+  position: relative;
+  list-style-type: none;
+  color: darkgray;
+}
+
+* {
+  vertical-align: top;
+}
+

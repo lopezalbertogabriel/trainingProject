@@ -1,0 +1,51 @@
+<div style="width: 70%; display: inline-block;">
+  <div>
+    <h3>Agregar item</h3>
+  </div>
+  <div style="display: inline;">
+    <div class="input">
+      <label><span>Titulo</span>
+        <input [(ngModel)]="active.title" placeholder="Titulo de la publicacion" required>
+      </label>
+    </div>
+    <div class="input">
+      <label><span>Monto</span>
+        <input type="number" [(ngModel)]="active.price" placeholder="Monto" required>
+      </label>
+    </div>
+    <div class="input">
+      <label><span>Imagen (URL)</span>
+        <input type="url" [(ngModel)]="active.pictureUrl" placeholder="URL de la imagen">
+      </label>
+    </div>
+    <div class="input" style="width: 10%; margin-right: 0;">
+      <label><span>Cantidad</span>
+        <input type="number" [(ngModel)]="active.amount" value="1" style="width: 60%;">
+      </label>
+    </div>
+    <div class="input">
+      <label><span>Payer</span>
+        <input type="email" [(ngModel)]="payer" placeholder="Email">
+      </label>
+    </div>
+    <button (click)="autofill()" style="font-size: medium; border-radius: 4px 4px 4px 4px; vertical-align: center;">
+      <span>AutoFill</span></button>
+  </div>
+  <div style="display: block; margin-top: 5%; margin-right: 5%;">
+    <div style="display:inline-block; float: right;">
+      <button (click)="addItem(active)" style="font-size: medium; border-radius: 4px 4px 4px 4px;">
+        <span>Agregar Item</span></button>
+    </div>
+    <div style="display:inline-block; float: left;">
+      <button (click)="generatePreference()"
+              style="font-size: medium; border-radius: 4px 4px 4px 4px; background-color: #607D8B; color: white;"
+              [disabled]="items.length==0"><span>Generar Preferencia</span></button>
+    </div>
+  </div>
+</div>
+<div style="width: 20%; padding-left: 5%; display: inline-block; margin-right: 5%">
+  <h3>Items agregados [{{items.length}}]</h3>
+  <ul style="display: inline-block" class="element">
+    <li *ngFor="let item of items" (click)="removeItem(item)"><span>{{item.title | uppercase}}</span></li>
+  </ul>
+</div>

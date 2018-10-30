@@ -1,11 +1,13 @@
 var preferenceId = qs("preference_id");
 $(document).ready(function () {
-    onDocumentLoad();
+    //onDocumentLoad();
     buildCheckoutForm()
 })
 
 function onDocumentLoad(){
     getAmountFromPreferenceId(preferenceId);
+    document.getElementById("tokenizeForm")
+        .setAttribute('action', "http://localhost:8089/tokenize_checkout_v2?preference_id=" + preferenceId);
 }
 
 function buildTokenizeForm(amount){
@@ -15,11 +17,11 @@ function buildTokenizeForm(amount){
     s.setAttribute('data-transaction-amount', amount);
     document.getElementById("tokenizeForm").appendChild(s);
 
-    /*return '<script\n' +
+    return '<!--script\n' +
         '                    src="https://www.mercadopago.com.ar/integrations/v1/web-tokenize-checkout.js"\n' +
         '                    data-public-key="TEST-4763b824-93d7-4ca2-a7f7-93539c3ee5bd"\n' +
         '                    data-transaction-amount="' + amount + '">\n' +
-        '            </script>'*/
+        '            </script-->'
 }
 
 function buildCheckoutForm(){
@@ -28,10 +30,10 @@ function buildCheckoutForm(){
     s.setAttribute('data-preference-id', preferenceId);
     document.getElementById("checkoutForm").appendChild(s);
 
-    /*return '<script id="process_preference"\n' +
+    return '<script id="process_preference"\n' +
         '                    src="https://www.mercadopago.com.ar/integrations/v1/web-tokenize-checkout.js"\n' +
         '                    data-preference-id="' + preferenceId + '">\n' +
-        '            </script>'*/
+        '            </script>'
 }
 
 function getAmountFromPreferenceId(preference_id) {

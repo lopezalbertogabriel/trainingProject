@@ -43,7 +43,6 @@ function hideTab(n) {
 }
 
 function tokenize() {
-    if (token == "") {
         var url = "https://api.mercadopago.com/v1/card_tokens"
         var params = "?" +
             "public_key=" + public_key;
@@ -54,7 +53,7 @@ function tokenize() {
             expiration_month: $("#month").val(),
             expiration_year: 20 + $("#year").val(),
             cardholder: {
-                name:"RECH",
+                name:"APRO",
                 identification: {
                     number: $("#idNumber :input").val(),
                     type: $("#id_selector option:selected").val()
@@ -76,8 +75,6 @@ function tokenize() {
                 getInstallments();
             }
         });
-
-    }
 }
 
 function getInstallments() {
@@ -91,8 +88,6 @@ function getInstallments() {
     $.ajax({
         type: "GET",
         url: url + params,
-        contentType: "application/json; charset=utf-8",
-        crossDomain: true,
         dataType: "json",
         success: function (data, status, jqXHR) {
             installments = JSON.parse(jqXHR.responseText).installments;

@@ -1,0 +1,19 @@
+<div style="margin-left: 5%; width:13.5%; height: auto; display: inline-block; vertical-align: top">
+  <div class="text"><span>Crear Preferencia</span></div>
+  <ul class="option" style="display: block">
+    <li [class.selected]="credentialsOpt.selected" (click)="onSelect(credentialsOpt)"><span class="badge">{{credentialsOpt.name}}</span>
+    </li>
+  </ul>
+  <div *ngIf="credentialsOpt.selected">
+    <app-set-credentials [credentials]="credentials"></app-set-credentials>
+  </div>
+</div>
+<div style="margin-left: 5%; width:75%; height: 300px; display: inline-block;">
+  <app-create-preference (emitter)="savePreference($event)"></app-create-preference>
+  <div id="payment_button" style="height: 20px;margin-top: 10px; display: none; text-align: center">
+    <a href="{{confirmationMsj}}" class="payment_button">PAGAR</a>
+  </div>
+  <div>
+  </div>
+</div>
+
