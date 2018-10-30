@@ -1,6 +1,7 @@
 Proyecto de training, integracion con las dos versiones del checkout de mercadopago. 
 
-## Descripcion de los proyectos en este dir: 
+## Proyectos
+
 
 ### choweb 
 
